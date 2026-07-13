@@ -21,3 +21,4 @@ class EstateProperty(models.Model):
         string='Garden Orientation',
         selection=[('north', 'North'), ('south', 'South'), ('east', 'East'), ('west', 'West')],
     )
+    active = fields.Boolean("Aktiv", default=True)

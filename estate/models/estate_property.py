@@ -5,7 +5,7 @@ class EstateProperty(models.Model):
     _name = "estate.property"
     _description = "Estate Property"
 
-    name = fields.Char("Property name", required=True)
+    name = fields.Char("Angebotsname", required=True)
     description = fields.Text("Description")
     postcode = fields.Char("Postcode")
     date_availability = fields.Date("Availability Date")

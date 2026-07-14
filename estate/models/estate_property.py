@@ -23,10 +23,12 @@ class EstateProperty(models.Model):
     )
     active = fields.Boolean("Aktiv", default=True)
     state = fields.Selection(
-        sting="Status",
+        string="Status",
         selection=[("new", "New"), ("offer_received", "Offer Received"), ("offer_accepted", "Offer Accepted"), ("sold", "Sold"), ("cancelled", "Cancelled")],
         default="new",
         required=True,
         copy=False,
     )
     property_type_id = fields.Many2one("estate.property.type", string="Property Type")
+    buyer_id = fields.Many2one("res.partner", string="Buyer", copy=False)
+    salesperson_id = fields.Many2one("res.users", string="Salesperson", default=lambda self: self.env.user.id)

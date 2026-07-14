@@ -41,6 +41,7 @@
 
                         </group>
                     </group>
+
                     <notebook>
                         <page string="Description">
                             <group>
@@ -52,6 +53,12 @@
                                 <field name="garden"/>
                                 <field name="garden_area"/>
                                 <field name="garden_orientation"/>
+                            </group>
+                        </page>
+                        <page string="Other info">
+                            <group>
+                                <field name="buyer_id"/>
+                                <field name="salesperson_id"/>
                             </group>
                         </page>
                     </notebook>

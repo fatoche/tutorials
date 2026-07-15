@@ -29,6 +29,7 @@
             <form string="Estate Property">
                 <sheet>
                     <h1><field name="name" placeholder="Bitte Titel eingeben"/></h1>
+                    <field name="tag_ids" widget="many2many_tags"/>
 
                     <group>
                         <group>

@@ -6,6 +6,17 @@
         <field name="view_mode">list,form</field>
     </record>
 
+    <record id="estate_property_type_view_list" model="ir.ui.view">
+        <field name="name">Estate property type list view</field>
+        <field name="model">estate.property.type</field>
+        <field name="arch" type="xml">
+            <list string="Property Types">
+                <field name="name"/>
+                <field name="sequence" widget="handle"/>
+            </list>
+        </field>
+    </record>
+
     <record id="estate_property_type_view_from" model="ir.ui.view">
         <field name="name">Property Types Form</field>
         <field name="model">estate.property.type</field>

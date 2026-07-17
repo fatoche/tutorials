@@ -6,6 +6,7 @@ import odoo.tools.float_utils as fu
 class EstateProperty(models.Model):
     _name = "estate.property"
     _description = "Estate Property"
+    _order = "id desc"
 
     name = fields.Char("Title", required=True)
     description = fields.Text("Description")

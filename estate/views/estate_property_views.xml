@@ -28,8 +28,20 @@
         <field name="arch" type="xml">
             <form string="Estate Property">
                 <header>
-                    <button name="set_as_sold" type="object" string="SOLD"/>
-                    <button name="set_as_cancelled" type="object" string="CANCEL"/>
+                    <button
+                        name="set_as_sold"
+                        type="object"
+                        string="SOLD"
+                        invisible="state == 'sold' or state == 'cancelled'"
+                        color="green"
+                    />
+                    <button
+                        name="set_as_cancelled"
+                        type="object"
+                        string="CANCEL"
+                        invisible="state == 'sold' or state == 'cancelled'"
+                        color="green"
+                    />
                     <field name="state" widget="statusbar"/>
                 </header>
                 <sheet>

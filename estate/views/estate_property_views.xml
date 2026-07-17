@@ -30,6 +30,7 @@
                 <header>
                     <button name="set_as_sold" type="object" string="SOLD"/>
                     <button name="set_as_cancelled" type="object" string="CANCEL"/>
+                    <field name="state" widget="statusbar"/>
                 </header>
                 <sheet>
                     <h1><field name="name" placeholder="Bitte Titel eingeben"/></h1>

@@ -54,7 +54,7 @@ class EstateProperty(models.Model):
                 return
             if fu.float_compare(record.selling_price, 0.9 * record.expected_price, precision_digits=2) < 0:
                 raise ValidationError(
-                    "The selling price mustn't be lower than 90%% of the expected price. " \
+                    "The selling price mustn't be lower than 90% of the expected price. " \
                     "You must change the expected price if you want to accept this offer.")
 
 

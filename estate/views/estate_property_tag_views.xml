@@ -6,6 +6,16 @@
         <field name="view_mode">list,form</field>
     </record>
 
+    <record id="estate_property_tag_view_list" model="ir.ui.view">
+        <field name="name">Estate property tag list view</field>
+        <field name="model">estate.property.tag</field>
+        <field name="arch" type="xml">
+            <list string="Property Tags" editable="bottom">
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
     <record id="estate_property_tag_view_from" model="ir.ui.view">
         <field name="name">Property Tags Form</field>
         <field name="model">estate.property.tag</field>

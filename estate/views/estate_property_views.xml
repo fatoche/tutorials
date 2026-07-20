@@ -4,6 +4,8 @@
         <field name="name">Estate property view</field>
         <field name="res_model">estate.property</field>
         <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="estate_property_view_search"/>
+        <field name="context">{'search_default_filter_available': True}</field>
     </record>
 
     <record id="estate_property_view_list" model="ir.ui.view">

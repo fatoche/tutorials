@@ -58,7 +58,7 @@
                     <group>
                         <group>
                             <field name="state"/>
-                            <field name="property_type_id"/>
+                            <field name="property_type_id" options="{'no_create': True}"/>
                             <field name="postcode"/>
                             <field name="date_availability"/>
                         </group>

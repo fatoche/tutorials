@@ -1,4 +1,5 @@
 from odoo import api, fields, models
+from odoo.exceptions import UserError
 
 class EstatePropertyOffer(models.Model):
     _name = "estate.property.offer"
@@ -18,6 +19,17 @@ class EstatePropertyOffer(models.Model):
         ("check_price", 'CHECK(price > 0)', "The offer- price must be strictly positive"),
     ]
 
+    @api.model
+    def create(self, vals):
+        new_price = vals['price']
+        for property in self.env['estate.property'].browse(vals['property_id']):
+            max_offer = max(offer.price for offer in property.offer_ids)
+            if new_price < max_offer:
+                raise UserError(f"The offer must be higher than {max_offer}")
+            
+            property.state = "offer_received"
+
+        return super().create(vals)
 
     @api.depends("create_date", "validity")
     def _compute_deadline(self):

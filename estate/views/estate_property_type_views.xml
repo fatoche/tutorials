@@ -12,6 +12,7 @@
         <field name="arch" type="xml">
             <list string="Property Types">
                 <field name="name"/>
+                <field name="offer_count"/>
                 <field name="sequence" widget="handle"/>
             </list>
         </field>
@@ -23,6 +24,19 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <button
+                        name="%(action_open_related_offers)d"
+                        type="action"
+                        class="oe_stat_button"
+                        icon="fa-money"
+                    >
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_value">
+                                <field name="offer_count"/>
+                            </span>
+                            <span class="o_stat_text"> Offers</span>
+                        </div>
+                    </button>
                     <h1><field name="name" placeholder="Enter type"/></h1>
                     <notebook>
                         <page string="Properties">

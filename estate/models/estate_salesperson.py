@@ -1,6 +1,6 @@
-from odoo import fields, model
+from odoo import fields, models
 
-class Salesperson(model.Model):
+class Salesperson(models.Model):
     _inherit = "res.users"
 
     property_ids = fields.One2many(
